@@ -6,4 +6,5 @@ add_executable(tests
         main.cpp
 )
 
-target_link_libraries(tests PUBLIC doctest::doctest)
+target_include_directories(tests PUBLIC ../)
+target_link_libraries(tests PRIVATE corotask doctest::doctest)
