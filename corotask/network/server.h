@@ -1,15 +1,13 @@
 #pragma once
 
 #include <QString>
-#include <QWebSocketServer>
+#include <QTcpServer>
 
 namespace ct::network {
-   class server : public QObject {
-   public:
+   class server : QTcpServer {
       Q_OBJECT
 
-   signals:
-   private slots:
-   private:
+   public:
+      bool start(const QString& host);
    };
 }

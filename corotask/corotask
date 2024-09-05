@@ -1,4 +1,19 @@
 #pragma once
 
+#include "common/traits.h"
+#include "common/timeit.hpp"
+#include "common/logging.h"
+#include "common/profiling.h"
+#include "interface/root.hpp"
+#include "interface/exec.hpp"
+#include "tasks/task.hpp"
+#include "tasks/awaitables.hpp"
 #include "network/server.h"
-#include "threads/pool.h"
+#include "threads/coro_pool.h"
+#include "threads/network_pool.h"
+
+namespace ct {
+    using namespace ct::interface;
+    using namespace ct::tasks;
+    using namespace ct::common;
+}

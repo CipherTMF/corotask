@@ -6,12 +6,15 @@
 int main(int argc, char** argv) {
    auto app = QCoreApplication(argc, argv);
 
-   auto server = ct::network::server();
-
-   QTimer::singleShot(0, []() {
-      qInfo() << "Ending";
+   QTimer::singleShot(0, [] {
+      ct::logging::logger::instance().set_level(ct::logging::level::VERBOSE);
+      CT_VERBOSE("NOT IMPLEMENTED YET");
+      CT_INFO("NOT IMPLEMENTED YET");
+      CT_WARNING("NOT IMPLEMENTED YET");
+      CT_ERROR("NOT IMPLEMENTED YET");
+      CT_FATAL("NOT IMPLEMENTED YET");
       qApp->exit();
    });
 
-   return app.exec(); // NOLINT(*-static-accessed-through-instance)
+   return app.exec();
 }
